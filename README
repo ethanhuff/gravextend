@@ -1,1 +1,55 @@
-testing
+This is my first project on github ever, and I suck at coding, so use at your own risk, if it ever is working at all.
+
+The plan is to get the Gravity Forms Product Addons (GFPA) by Lucas Stark to do more with WooCommerce. 
+
+
+
+
+
+The current setup I have gets "something working" (versus just about every ecommerce software which seem to be made with the belief we all run T-shirt shops), but forces a divide between the whole regular system of WooCommerce products. We can't track stock, manipulate weight or set up Dynamic Pricing (another plugin by Lucas Stark).
+
+When the "Allow field to be populated dynamically" option is chosen on a Product of the Pricing Fields type, 3 Fields with a blank parameter name are given as options:
+
+Name
+Price
+Quantity
+
+**need to find where these are coming from because..
+
+when this option is checked on other Options, such as Size, one can add a parameter name, but there are no Fields associated. (may not be important)
+
+On the properties tab of Options fields, Choices can be set to enable values:
+
+"Check this option to specify a value for each choice. Choice values are not displayed to the user viewing the form, but are accessible to administrators when viewing the entry."
+
+**but I don't know where these values are saved for viewing
+
+We need to be able to do stuff with these values. 
+
+EXAMPLE (feel free to improve this project if you actually know what you are doing or need to add things like other product dimensions besides L/W/H)
+
+We sell the liquid used in electronic cigarettes. The options I need are:
+
+(1) Size: 12, 36, 72, 144ml (and maybe bigger added as options only visible to wholesalers later on)
+[lower priority] get this plugin to stop hijacking any base price set in WooCommerce (which breaks the theme by not displaying any price)
+
+This option maybe should be used in the internal WooCommerce product, so it works with other plugins. Splitting what is used in WC with what is used in GFPA should reduce what could be ~5K variations to something manageable, but there are issues:
+
+I am using dropdowns for these options, with the Enable enhanced user interface option checked. This uses Chosen (http://harvesthq.github.com/chosen/). WooCommerce also uses Chosen, but for Country entry on checkout I think.
+[lower priority] figure out if Chosen is being called twice on product pages, or just called separately when needed, and make it used on product pages for the WC variations dropdowns too. Alternatively, use radio buttons and restyle to look like the button sets in TWBS jQuery UI.
+
+Price for these sizes are going to have to vary, but the starting set is $7/19/38/70. I abandoned doing -$7 and trying to set $7 base price in WC, but we may return this option to WC as above.
+
+The problem with returning to WC is that there is then no way to set a condition for the other variations of options to be set...
+
+The values passed by these options are now 12/36/72/144. These values would work well for getting them to manage a unified stock, but they would need to be manipulated to 1x/3x/6x/12x multipliers to do anything meaningful with the other options.
+
+(2) Nicotine: 0, 6, 12, 18, 24, 30, and maybe 36. Currently there is no pricing variation, but I would like to have them. This could maybe be returned to WC, but would not help much.
+
+(3) WTA (an option to use the full tobacco alkaloid profile and become closer to smoking): None, Low, Medium, High, X-high
+
+This needs to have a "fixed commodity" price per 12ml "unit": $0, $2.50, $3, $3.50, $4   (viz., $0, $7.50, $9, $10.50, $12 for 36ml)
+
+Currently this is solved by enabling conditional logic in GFPA and showing a different set of options based on the size. (seems to be buggy and show double fields in cases too)
+
+ 
