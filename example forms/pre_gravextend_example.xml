@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<forms version="1.6.3.3.4">
+	<form labelPlacement="top_label" useCurrentUserAsAuthor="1">
+		<title><![CDATA[Liquid Options]]></title>
+		<description><![CDATA[Description text: There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. ]]></description>
+		<confirmation type="message">
+			<message><![CDATA[Thanks for contacting us! We will get in touch with you shortly.]]></message>
+		</confirmation>
+		<button type="text">
+			<text><![CDATA[Add to Cart]]></text>
+		</button>
+		<fields>
+			<field id="2" isRequired="1" size="medium" type="product" inputType="hiddenproduct">
+				<description><![CDATA[Field Description in "product"]]></description>
+				<label><![CDATA[Product Name (Hidden Price)]]></label>
+				<inputs>
+					<input id="2.1">
+						<label><![CDATA[Name]]></label>
+					</input>
+					<input id="2.2">
+						<label><![CDATA[Price]]></label>
+					</input>
+					<input id="2.3">
+						<label><![CDATA[Quantity]]></label>
+					</input>
+				</inputs>
+				<basePrice><![CDATA[$0.00]]></basePrice>
+			</field>
+			<field id="4" isRequired="1" size="medium" type="option" inputType="select" productField="2" enablePrice="1" enableChoiceValue="1" enableEnhancedUI="1">
+				<label><![CDATA[Size]]></label>
+				<choices>
+					<choice isSelected="1">
+						<text><![CDATA[12 ml]]></text>
+						<value><![CDATA[12]]></value>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[36 ml]]></text>
+						<value><![CDATA[36]]></value>
+						<price><![CDATA[$12.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[72 ml]]></text>
+						<value><![CDATA[72]]></value>
+						<price><![CDATA[$31.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[144 ml]]></text>
+						<value><![CDATA[144]]></value>
+						<price><![CDATA[$63.00]]></price>
+					</choice>
+				</choices>
+			</field>
+			<field id="5" isRequired="1" size="medium" type="option" inputType="select" productField="2" enablePrice="1" enableEnhancedUI="1">
+				<label><![CDATA[Nicotine]]></label>
+				<choices>
+					<choice>
+						<text><![CDATA[0 mg]]></text>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[6 mg]]></text>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[12 mg]]></text>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+					<choice isSelected="1">
+						<text><![CDATA[18 mg]]></text>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[24 mg]]></text>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[30 mg]]></text>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+				</choices>
+			</field>
+			<field id="6" isRequired="1" size="medium" type="option" inputType="select" productField="2" enablePrice="1" enableChoiceValue="1" enableEnhancedUI="1">
+				<defaultValue><![CDATA[0]]></defaultValue>
+				<cssClass><![CDATA[option-wta]]></cssClass>
+				<inputName><![CDATA[size-multiplier]]></inputName>
+				<label><![CDATA[WTA Level (12ml)]]></label>
+				<choices>
+					<choice isSelected="1">
+						<text><![CDATA[None]]></text>
+						<value><![CDATA[0]]></value>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[Low]]></text>
+						<value><![CDATA[2.5]]></value>
+						<price><![CDATA[$2.50]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[Medium]]></text>
+						<value><![CDATA[3]]></value>
+						<price><![CDATA[$3.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[High]]></text>
+						<value><![CDATA[3.5]]></value>
+						<price><![CDATA[$3.50]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[X-high]]></text>
+						<value><![CDATA[4]]></value>
+						<price><![CDATA[$4.00]]></price>
+					</choice>
+				</choices>
+				<conditionalLogic actionType="show" logicType="all">
+					<rules>
+						<rule fieldId="4" operator="is">
+							<value><![CDATA[12]]></value>
+						</rule>
+						<rule fieldId="5" operator="isnot">
+							<value><![CDATA[0 mg]]></value>
+						</rule>
+						<rule fieldId="5" operator="&gt;">
+							<value><![CDATA[12 mg]]></value>
+						</rule>
+						<rule fieldId="5" operator="isnot">
+							<value><![CDATA[6 mg]]></value>
+						</rule>
+						<rule fieldId="5" operator="isnot">
+							<value><![CDATA[0 mg]]></value>
+						</rule>
+					</rules>
+				</conditionalLogic>
+			</field>
+			<field id="12" isRequired="1" size="medium" type="option" inputType="select" productField="2" enablePrice="1" enableChoiceValue="1" enableEnhancedUI="1">
+				<defaultValue><![CDATA[0]]></defaultValue>
+				<cssClass><![CDATA[option-wta]]></cssClass>
+				<inputName><![CDATA[size-multiplier]]></inputName>
+				<label><![CDATA[WTA Level (12ml - 6mg)]]></label>
+				<choices>
+					<choice isSelected="1">
+						<text><![CDATA[None]]></text>
+						<value><![CDATA[0]]></value>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[Medium]]></text>
+						<value><![CDATA[3]]></value>
+						<price><![CDATA[$3.00]]></price>
+					</choice>
+				</choices>
+				<conditionalLogic actionType="show" logicType="all">
+					<rules>
+						<rule fieldId="4" operator="is">
+							<value><![CDATA[12]]></value>
+						</rule>
+						<rule fieldId="5" operator="is">
+							<value><![CDATA[6 mg]]></value>
+						</rule>
+					</rules>
+				</conditionalLogic>
+			</field>
+			<field id="11" isRequired="1" size="medium" type="option" inputType="select" productField="2" enablePrice="1" enableChoiceValue="1" enableEnhancedUI="1">
+				<defaultValue><![CDATA[0]]></defaultValue>
+				<cssClass><![CDATA[option-wta]]></cssClass>
+				<inputName><![CDATA[size-multiplier]]></inputName>
+				<label><![CDATA[WTA Level (12ml - 12mg)]]></label>
+				<choices>
+					<choice isSelected="1">
+						<text><![CDATA[None]]></text>
+						<value><![CDATA[0]]></value>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[Medium]]></text>
+						<value><![CDATA[3]]></value>
+						<price><![CDATA[$3.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[X-high]]></text>
+						<value><![CDATA[4]]></value>
+						<price><![CDATA[$4.00]]></price>
+					</choice>
+				</choices>
+				<conditionalLogic actionType="show" logicType="all">
+					<rules>
+						<rule fieldId="4" operator="is">
+							<value><![CDATA[12]]></value>
+						</rule>
+						<rule fieldId="5" operator="is">
+							<value><![CDATA[12 mg]]></value>
+						</rule>
+					</rules>
+				</conditionalLogic>
+			</field>
+			<field id="8" isRequired="1" size="medium" type="option" inputType="select" productField="2" enablePrice="1" enableChoiceValue="1" enableEnhancedUI="1">
+				<defaultValue><![CDATA[0]]></defaultValue>
+				<cssClass><![CDATA[option-wta]]></cssClass>
+				<inputName><![CDATA[size-multiplier]]></inputName>
+				<label><![CDATA[WTA Level (36ml)]]></label>
+				<choices>
+					<choice isSelected="1">
+						<text><![CDATA[None]]></text>
+						<value><![CDATA[0]]></value>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[Low]]></text>
+						<value><![CDATA[7.5]]></value>
+						<price><![CDATA[$7.50]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[Medium]]></text>
+						<value><![CDATA[9]]></value>
+						<price><![CDATA[$9.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[High]]></text>
+						<value><![CDATA[10.5]]></value>
+						<price><![CDATA[$10.50]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[X-high]]></text>
+						<value><![CDATA[12]]></value>
+						<price><![CDATA[$12.00]]></price>
+					</choice>
+				</choices>
+				<conditionalLogic actionType="show" logicType="all">
+					<rules>
+						<rule fieldId="4" operator="is">
+							<value><![CDATA[36]]></value>
+						</rule>
+					</rules>
+				</conditionalLogic>
+			</field>
+			<field id="10" isRequired="1" size="medium" type="option" inputType="select" productField="2" enablePrice="1" enableChoiceValue="1" enableEnhancedUI="1">
+				<defaultValue><![CDATA[0]]></defaultValue>
+				<cssClass><![CDATA[option-wta]]></cssClass>
+				<inputName><![CDATA[size-multiplier]]></inputName>
+				<label><![CDATA[WTA Level (72ml)]]></label>
+				<choices>
+					<choice isSelected="1">
+						<text><![CDATA[None]]></text>
+						<value><![CDATA[0]]></value>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[Low]]></text>
+						<value><![CDATA[15]]></value>
+						<price><![CDATA[$15.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[Medium]]></text>
+						<value><![CDATA[18]]></value>
+						<price><![CDATA[$18.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[High]]></text>
+						<value><![CDATA[21]]></value>
+						<price><![CDATA[$21.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[X-high]]></text>
+						<value><![CDATA[24]]></value>
+						<price><![CDATA[$24.00]]></price>
+					</choice>
+				</choices>
+				<conditionalLogic actionType="show" logicType="all">
+					<rules>
+						<rule fieldId="4" operator="is">
+							<value><![CDATA[72]]></value>
+						</rule>
+					</rules>
+				</conditionalLogic>
+			</field>
+			<field id="9" isRequired="1" size="medium" type="option" inputType="select" productField="2" enablePrice="1" enableChoiceValue="1" enableEnhancedUI="1">
+				<defaultValue><![CDATA[0]]></defaultValue>
+				<cssClass><![CDATA[option-wta]]></cssClass>
+				<inputName><![CDATA[size-multiplier]]></inputName>
+				<label><![CDATA[WTA Level (144ml)]]></label>
+				<choices>
+					<choice isSelected="1">
+						<text><![CDATA[None]]></text>
+						<value><![CDATA[0]]></value>
+						<price><![CDATA[$0.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[Low]]></text>
+						<value><![CDATA[30]]></value>
+						<price><![CDATA[$30.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[Medium]]></text>
+						<value><![CDATA[36]]></value>
+						<price><![CDATA[$36.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[High]]></text>
+						<value><![CDATA[42]]></value>
+						<price><![CDATA[$42.00]]></price>
+					</choice>
+					<choice>
+						<text><![CDATA[X-high]]></text>
+						<value><![CDATA[48]]></value>
+						<price><![CDATA[$48.00]]></price>
+					</choice>
+				</choices>
+				<conditionalLogic actionType="show" logicType="all">
+					<rules>
+						<rule fieldId="4" operator="is">
+							<value><![CDATA[144]]></value>
+						</rule>
+					</rules>
+				</conditionalLogic>
+			</field>
+		</fields>
+		<descriptionPlacement><![CDATA[above]]></descriptionPlacement>
+		<enableAnimation><![CDATA[1]]></enableAnimation>
+		<notification>
+			<to><![CDATA[{admin_email}]]></to>
+			<subject><![CDATA[New submission from {form_title}]]></subject>
+			<message><![CDATA[{all_fields}]]></message>
+		</notification>
+	</form>
+</forms>

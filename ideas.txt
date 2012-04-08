@@ -2,6 +2,11 @@ Priority of tasks
 
 1. pass values in between fields
 
+ - possibly use these to solve the dual need for 12/36/72/144 values for size/stock and 1x/3x/6x/12x multipliers using this: http://www.gravityhelp.com/documentation/index.php?title=Gform_save_field_value&diff=prev&oldid=1415
+ 
+ "Use this filter to change the field's value before saving it to the database. Use in conjunction with gform_get_input_value to perform low level transformations, such as encrypting/decrypting a field. "
+
+
 
 4. Remember user choices for options (probably in hidden user profile fields)
 
