@@ -1,0 +1,11 @@
+Priority of tasks
+
+1. pass values in between fields
+
+
+4. Remember user choices for options (probably in hidden user profile fields)
+
+(4) http://www.gravityhelp.com/documentation/page/Gform_after_submission
+
+besides Form and Entry Objects, see Field Objects: http://www.gravityhelp.com/documentation/page/Fields
+
